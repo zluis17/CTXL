@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from "react";
 import logoFacebook from "../img/facebook-512.webp";
 import logoGoogle from "../img/google_logo-google_icongoogle-512.webp";
 import logoTwitter from "../img/1690643591twitter-x-logo-png.webp";
 import logoInstagram from "../img/instagram-logo-instagram-icon-transparent-free-png.webp";
+import backgroundImag from "../img/121.jpg";
 
 function IPedidos() {
+  const [data, setData] = useState([
+    { id: 1, product: "Product A", quantity: 10 },
+    { id: 2, product: "Product B", quantity: 20 },
+    { id: 3, product: "Product C", quantity: 15 },
+  ]);
+
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
+  const handleEdit = (id) => {
+    // Implement edit functionality here
+    alert(`Edit item with ID ${id}`);
+  };
+
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
@@ -74,15 +90,66 @@ function IPedidos() {
           </a>
         </div>
       </aside>
+
       {/* Main Content */}
-      <main className="flex-1 p-10 bg-gray-900 text-white">
-        <h1 className="text-4xl font-bold mb-8">Welcome to the Dashboard</h1>
-        <p className="text-lg">
-          This is your main dashboard. Here you can navigate through the application using the sidebar.
+      <main className="text-center flex-1 p-10 bg-gray-900 text-white  bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${backgroundImag})` }}>
+      
+        <h1 className="text-4xl font-bold mb-8">Inventario Pedidos</h1>
+        
+        <div>
+        <p className="text-3xl text-left relative top-16 ">   
+          Listado:
         </p>
+        </div>
+        <div>
+        <a
+            href="#settings"
+            className="block text-right text-3xl p-8  hover:text-purple-400 width-50px ">
+            Registrar Nuevo 
+          </a>
+        </div>
+      
+
+        {/* Table */}
+        <div className="overflow-x-auto mx-auto max-w-4xl">
+          <table className="min-w-full bg-gray-800 text-white border border-purple-700 rounded-lg shadow-lg">
+            <thead>
+              <tr className="bg-gray-700 border-b border-púrple-600 text-2xl">
+                <th className="py-1 px-2">ID</th>
+                <th className="py-1 px-2">Product</th>
+                <th className="py-1 px-2">Quantity</th>
+                <th className="py-1 px-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((item) => (
+                <tr key={item.id} className="border-b border-purple-600 text-xl">
+                  <td className="py-1 px-2">{item.id}</td>
+                  <td className="py-1 px-2">{item.product}</td>
+                  <td className="py-1 px-2">{item.quantity}</td>
+                  <td className="py-1 px-2">
+                    <button
+                      onClick={() => handleEdit(item.id)}
+                      className="text-blue-400 hover:underline mr-2 text-xl"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDelete(item.id)}
+                      className="text-red-400 hover:underline text-xl "
+                    >   
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </main>
-      </div>
+    </div>
   );
 }
 
 export default IPedidos;
+ 
