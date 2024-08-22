@@ -10,7 +10,7 @@ function Home() {
       {/* Sidebar */}
       <aside className="w-64 bg-black text-white flex flex-col">
         <div className="p-6">
-          <h2 className="text-3xl font-bold text-purple-500">App Name</h2>
+          <h2 className="text-3xl font-bold text-purple-500">CTXL</h2>
         </div>
         <nav className="flex flex-col p-6 space-y-2">
           <a
