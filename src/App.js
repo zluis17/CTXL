@@ -3,7 +3,7 @@ import React from 'react'
 //import Login from './pages/login'
 //import Home  from './pages/home'
 //import SingUp from './pages/singUp'
-import Index from './pages/index'
+import Index from './pages/perfilEditar'
 
 
 export default function App() {

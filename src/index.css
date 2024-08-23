@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
@@ -90,7 +90,7 @@
         opacity: 0;
     }
     
-=======
+
 /* Footer styles */
 .footer {
     background-color: #6b21a8; /* Color morado */
@@ -283,4 +283,4 @@
     }
   }
   
->>>>>>> 24616c00b5d77043fab6610fd34017e4f7b66eed
+
