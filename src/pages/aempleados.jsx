@@ -9,7 +9,7 @@ import '../index.css';
 
 
 
-function Rproveedor(){
+function AEmpleados(){
     const [isInventoryOpen, setIsInventoryOpen] = useState(false);
     const [isRegisterOpen, setIsRegisterOpen] = useState(false);
     const toggleInventory = () => {
@@ -168,7 +168,6 @@ function Rproveedor(){
                 {/* Content */}
                 <div className=" w-3/4 margin-top-20px">
                     <div className="w-1/4 flex">
-                        <h1 className="white-space:nowrap text-4xl font-bold">Registro Proveedores</h1>
                         <div className="pl-[120vh]">
                         </div>
                     </div> 
@@ -176,7 +175,7 @@ function Rproveedor(){
                 {/* Registro */}
                 <div className="flex justify-center items-center h-screen">
                     <div className="w-full max-w-md bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
-                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Registro Proveedores</h2>
+                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Actualizar Empleado</h2>
                         <form onSubmit={handleSubmit}>
                         <div className="space-y-6">
                             <div className="w-full">
@@ -261,18 +260,12 @@ function Rproveedor(){
                                     required
                                 />
                             </div>
-                            <div className="flex space-x-4">
-                            <button
-                                type="button"
-                                className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
-                                >
-                                Cancelar
-                            </button>
+                            <div className="text-center">
                             <button
                                 type="submit"
                                 className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
                                 >
-                                Registrar
+                                Actualizar
                             </button>
                             </div>
                         </div>
@@ -283,4 +276,4 @@ function Rproveedor(){
         </div>
     );
 };
-export default Rproveedor;
+export default AEmpleados;

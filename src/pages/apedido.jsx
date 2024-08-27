@@ -6,7 +6,7 @@ import logoInstagram from '../img/instagram-logo-instagram-icon-transparent-free
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
 
-function RPedidos(){
+function APedidos(){
     const [isInventoryOpen, setIsInventoryOpen] = useState(false);
     const [isRegisterOpen, setIsRegisterOpen] = useState(false);
     const toggleInventory = () => {
@@ -175,7 +175,7 @@ function RPedidos(){
                 {/* Registro */}
                 <div className="flex justify-center items-center h-screen">
                     <div className="w-[800px] bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
-                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Registro Pedido</h2>
+                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Actualizar Pedido</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="space-y-6">
                                 <div className="flex space-x-4">
@@ -324,7 +324,7 @@ function RPedidos(){
                                         type="submit"
                                         className="px-6 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition duration-300"
                                     >
-                                        Registrar Pedido
+                                        Actualizar
                                     </button>
                                 </div>
                             </div>
@@ -336,4 +336,4 @@ function RPedidos(){
     );
 }
 
-export default RPedidos;
+export default APedidos;

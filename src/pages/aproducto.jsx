@@ -7,7 +7,7 @@ import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
 
 
-function Rproductos(){
+function AProductos(){
     const [isInventoryOpen, setIsInventoryOpen] = useState(false);
     const [isRegisterOpen, setIsRegisterOpen] = useState(false);
     const toggleInventory = () => {
@@ -19,13 +19,12 @@ function Rproductos(){
     const [Cantidad, setCantidad] = useState('');
     const [Material, setMaterial] = useState('');
     const [Color, setColor] = useState('');
-    const [Administrador, setAdministrador] = useState('');
-    const [Proveedor, setProveedor] = useState('');
+
 
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('registro con:', { Cantidad, Material, Color, Administrador, Proveedor });
+        console.log('registro con:', { Cantidad, Material, Color});
     };
     return (
         <div className="flex h-screen">
@@ -164,7 +163,6 @@ function Rproductos(){
                 {/* Content */}
                 <div className=" w-3/4 margin-top-20px">
                     <div className="w-1/4 flex">
-                        <h1 className="white-space:nowrap text-4xl font-bold">Registro productos</h1>
                         <div className="pl-[120vh]">
                         </div>
                     </div> 
@@ -172,7 +170,7 @@ function Rproductos(){
                 {/* Registro */}
                 <div className="flex justify-center items-center h-screen">
                     <div className="w-full max-w-md bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
-                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Registrar producto</h2>
+                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Actualizar Productos</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="space-y-6">
                                 <div className="flex flex-col space-y-4">
@@ -212,18 +210,12 @@ function Rproductos(){
                                     
                                     
                                 </div>
-                                <div className="flex space-x-4">
-                                    <button
-                                        type="button"
-                                        className="w-1/2 bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
-                                        >
-                                        Cancelar
-                                    </button>
+                                <div className="text-center">
                                     <button
                                         type="submit"
                                         className="w-1/2 bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
                                         >
-                                        Registrar
+                                        Actualizar
                                     </button>
                                 </div>
                             </div>
@@ -234,4 +226,4 @@ function Rproductos(){
         </div>
     );
 };
-export default Rproductos;
+export default AProductos;

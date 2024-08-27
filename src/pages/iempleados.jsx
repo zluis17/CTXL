@@ -97,7 +97,7 @@ const MiComponente = () => {
     );
 };
 
-function IProveedores() {
+function IEmpleados() {
     const [data, setData] = useState([
         {
             id: 1,
@@ -318,7 +318,7 @@ function IProveedores() {
                     </div>
                 </div>
                 {/* Table */}
-                <div className="overflow-x-auto bg-white border border-purple-200 shadow-xl rounded-lg mt-6">
+                <div className="overflow-x-auto bg-white border border-purple-200 shadow-2xl shadow-purple-600/100 mt-6">
                     <table className="w-full bg-black">
                         <thead className="bg-purple-600 text-white">
                             <tr>
@@ -334,7 +334,7 @@ function IProveedores() {
                             {data.map((item) => (
                                 <tr
                                     key={item.id}
-                                    className="border-b border-gray-700"
+                                    className="border-b border-white"
                                     >
                                     <td className="p-3">{item.nombre}</td>
                                     <td className="p-3">{item.tipoDocumento}</td>
@@ -364,4 +364,4 @@ function IProveedores() {
         </div>
     );
 }
-export default IProveedores;
+export default IEmpleados;

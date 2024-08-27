@@ -282,7 +282,7 @@ function Iproducto() {
           </div>
         </div>
 
-        <div className="overflow-x-auto bg-white border border-purple-200 shadow-xl rounded-lg">
+        <div className="overflow-x-auto bg-white border border-purple-200 shadow-2xl shadow-purple-600/100">
           <table className="border-r border-l  border-purple-600 w-full bg-black  overflow-hidden">
             <thead className="bg-purple-600 text-white border-b border-white ">
             <tr>

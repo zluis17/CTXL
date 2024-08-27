@@ -63,33 +63,39 @@ function IPedidos() {
   const [data, setData] = useState([
     {
       id: 1,
-      nombre: 'Juan',
-      apellido: 'Pérez',
+      cliente: 'Juan',
+      empleado: 'Pérez',
+      prenda: 'Camisa',
       tela: 'Algodón',
       estampado: 'Sí',
       cantidad: 10,
+      talla: 'L',
       bordado: 'No',
       precioInicial: 100,
       precioFinal: 150,
     },
     {
       id: 2,
-      nombre: 'María',
-      apellido: 'González',
+      cliente: 'Carlos',
+      empleado: 'Jose',
+      prenda: 'Pantalon',
       tela: 'Lino',
       estampado: 'No',
       cantidad: 20,
+      talla: 'L',
       bordado: 'Sí',
       precioInicial: 200,
       precioFinal: 250,
     },
     {
       id: 3,
-      nombre: 'Carlos',
-      apellido: 'Rodríguez',
+      cliente: 'Pedro',
+      empleado: 'Pablo',
+      prenda: 'Pantaloneta',
       tela: 'Seda',
       estampado: 'Sí',
       cantidad: 15,
+      talla: 'L',
       bordado: 'Sí',
       precioInicial: 150,
       precioFinal: 200,
@@ -298,16 +304,19 @@ function IPedidos() {
           </div>
         </div>
 
-        <div className="overflow-x-auto bg-white border border-purple-200 shadow-xl rounded-lg">
-          <table className="border-r border-l  border-purple-600 w-full bg-black  overflow-hidden">
+        <div className="overflow-x-auto bg-black border border-purple-200 shadow-2xl shadow-purple-600/100">
+          <table className=" w-full bg-black  overflow-hidden ">
             <thead className="bg-purple-600 text-white border-b border-white ">
               <tr>
-                <th className="p-3 text-center">Nombre</th>
-                <th className="p-3 text-center">Apellido</th>
+                <th className="p-3 text-center">Id</th>
+                <th className="p-3 text-center">Cliente</th>
+                <th className="p-3 text-center">Empleado</th>
+                <th className="p-3 text-center">Prenda</th>
                 <th className="p-3 text-center">Tela</th>
-                <th className="p-3 text-center">Estampado (Sí/No)</th>
+                <th className="p-3 text-center">Estampado</th>
                 <th className="p-3 text-center">Cantidad</th>
-                <th className="p-3 text-center">Bordado (Sí/No)</th>
+                <th className="p-3 text-center">Talla</th>
+                <th className="p-3 text-center">Bordado</th>
                 <th className="p-3 text-center">Precio Inicial</th>
                 <th className="p-3 text-center">Precio Final</th>
                 <th className="p-3 text-center">Acciones</th>
@@ -316,11 +325,14 @@ function IPedidos() {
             <tbody className="text-center">
               {data.map((item) => (
                 <tr key={item.id} className=" border-r border-b border-white ">
-                  <td className="p-3">{item.nombre}</td>
-                  <td className="p-3">{item.apellido}</td>
+                  <td className="p-3">{item.id}</td>
+                  <td className="p-3">{item.cliente}</td>
+                  <td className="p-3">{item.empleado}</td>
+                  <td className="p-3">{item.prenda}</td>
                   <td className="p-3">{item.tela}</td>
                   <td className="p-3">{item.estampado}</td>
                   <td className="p-3">{item.cantidad}</td>
+                  <td className="p-3">{item.talla}</td>
                   <td className="p-3">{item.bordado}</td>
                   <td className="p-3">{item.precioInicial}</td>
                   <td className="p-3">{item.precioFinal}</td>
