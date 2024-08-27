@@ -58,8 +58,7 @@ const MiComponente = () => {
   );
 };
 
-
-function IPedidos() {
+function Iproducto() {
   const [data, setData] = useState([
     {
       id: 1,
@@ -98,7 +97,6 @@ function IPedidos() {
 
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-  
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -106,7 +104,7 @@ function IPedidos() {
 
   const handleEdit = (id) => {
     alert(`Edit item with ID ${id}`);
-};
+  };
 
   const toggleInventory = () => {
     setIsInventoryOpen(!isInventoryOpen);
@@ -135,7 +133,6 @@ function IPedidos() {
             className="p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
           >
             Perfil
-
           </a>
           <div>
             <button
@@ -163,12 +160,12 @@ function IPedidos() {
             {isInventoryOpen && (
               <div className="pl-6 mt-2">
                 <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/ipedidos"
                 >
                   Inventario Pedidos
                 </Link>
                 <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" yo="/imaterial"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/"
                 >
                   Inventario Material
                 </Link>
@@ -266,6 +263,8 @@ function IPedidos() {
           </a>
         </div>
       </aside>
+
+      
       <main
                 className="flex-1 flex flex-col p-10 bg-gray-100 text-white bg-cover bg-no-repeat"
                 style={{ backgroundImage: `url(${backgroundImag})` }}
@@ -274,7 +273,7 @@ function IPedidos() {
         <div className=" w-3/4 mt-20">
           <div className="w-1/4 flex">
             <h1 className="text-4xl font-bold whitespace-nowrap">
-              Inventario Pedidos
+              Inventario Material
             </h1>
             <div className="pl-[120vh]">
               <MiComponente />
@@ -340,10 +339,10 @@ function IPedidos() {
               ))}
             </tbody>
           </table>
-        </div>                        
+        </div>
       </main>
     </div>
   );
 }
 
-export default IPedidos;
+export default Iproducto;
