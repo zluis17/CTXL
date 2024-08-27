@@ -5,7 +5,7 @@ import logoTwitter from '../img/1690643591twitter-x-logo-png.webp';
 import logoInstagram from '../img/instagram-logo-instagram-icon-transparent-free-png.webp';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
-import { Link } from 'react-router-dom';
+
 
 const MiComponente = () => {
   return (
@@ -62,36 +62,21 @@ function Iproducto() {
   const [data, setData] = useState([
     {
       id: 1,
-      nombre: 'Juan',
-      apellido: 'Pérez',
-      tela: 'Algodón',
-      estampado: 'Sí',
       cantidad: 10,
-      bordado: 'No',
-      precioInicial: 100,
-      precioFinal: 150,
+      material: 'Lana',
+      color: 'Rojo',
     },
     {
       id: 2,
-      nombre: 'María',
-      apellido: 'González',
-      tela: 'Lino',
-      estampado: 'No',
       cantidad: 20,
-      bordado: 'Sí',
-      precioInicial: 200,
-      precioFinal: 250,
+      material: 'Algodón',
+      color: 'Azul',
     },
     {
       id: 3,
-      nombre: 'Carlos',
-      apellido: 'Rodríguez',
-      tela: 'Seda',
-      estampado: 'Sí',
       cantidad: 15,
-      bordado: 'Sí',
-      precioInicial: 150,
-      precioFinal: 200,
+      material: 'Seda',
+      color: 'Verde',
     },
   ]);
 
@@ -159,16 +144,18 @@ function Iproducto() {
             </button>
             {isInventoryOpen && (
               <div className="pl-6 mt-2">
-                <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/ipedidos"
+                <a
+                 href="#option2"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Pedidos
-                </Link>
-                <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/"
+                </a>
+                <a
+                 href="#option2"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Material
-                </Link>
+                </a>
                 <a
                   href="#option2"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
@@ -298,30 +285,20 @@ function Iproducto() {
         <div className="overflow-x-auto bg-white border border-purple-200 shadow-xl rounded-lg">
           <table className="border-r border-l  border-purple-600 w-full bg-black  overflow-hidden">
             <thead className="bg-purple-600 text-white border-b border-white ">
-              <tr>
-                <th className="p-3 text-center">Nombre</th>
-                <th className="p-3 text-center">Apellido</th>
-                <th className="p-3 text-center">Tela</th>
-                <th className="p-3 text-center">Estampado (Sí/No)</th>
-                <th className="p-3 text-center">Cantidad</th>
-                <th className="p-3 text-center">Bordado (Sí/No)</th>
-                <th className="p-3 text-center">Precio Inicial</th>
-                <th className="p-3 text-center">Precio Final</th>
-                <th className="p-3 text-center">Acciones</th>
+            <tr>
+                <th className="p-4">Cantidad</th>
+                <th className="p-4">Material</th>
+                <th className="p-4">Color</th>
+                <th className="p-4">Acciones</th>
               </tr>
             </thead>
             <tbody className="text-center">
               {data.map((item) => (
                 <tr key={item.id} className=" border-r border-b border-white ">
-                  <td className="p-3">{item.nombre}</td>
-                  <td className="p-3">{item.apellido}</td>
-                  <td className="p-3">{item.tela}</td>
-                  <td className="p-3">{item.estampado}</td>
-                  <td className="p-3">{item.cantidad}</td>
-                  <td className="p-3">{item.bordado}</td>
-                  <td className="p-3">{item.precioInicial}</td>
-                  <td className="p-3">{item.precioFinal}</td>
-                  <td className="p-3">
+                  <td className="p-4 border-b">{item.cantidad}</td>
+                  <td className="p-4 border-b">{item.material}</td>
+                  <td className="p-4 border-b">{item.color}</td>
+                  <td className="p-4 border-b">
                     <button
                       onClick={() => handleEdit(item.id)}
                       className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2"

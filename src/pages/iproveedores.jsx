@@ -184,7 +184,8 @@ function IProveedores() {
                         {isInventoryOpen && (
                             <div className="pl-6 mt-2">
                                 <a
-                                    className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/ipedidos"
+                                 href="#option2"
+                                    className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                                     >
                                     Inventario Pedidos
                                 </a>

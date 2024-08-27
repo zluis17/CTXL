@@ -5,7 +5,7 @@ import logoTwitter from '../img/1690643591twitter-x-logo-png.webp';
 import logoInstagram from '../img/instagram-logo-instagram-icon-transparent-free-png.webp';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
-import { Link } from 'react-router-dom';
+
 
 const MiComponente = () => {
   return (
@@ -162,16 +162,18 @@ function IPedidos() {
             </button>
             {isInventoryOpen && (
               <div className="pl-6 mt-2">
-                <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" to="/"
+                <a
+                 href="#option2"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Pedidos
-                </Link>
-                <Link
-                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" yo="/imaterial"
+                </a>
+                <a
+                 href="#option2"
+                  className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Material
-                </Link>
+                </a>
                 <a
                   href="#option2"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
