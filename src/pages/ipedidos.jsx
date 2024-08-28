@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
 
@@ -103,9 +104,6 @@ function IPedidos() {
     setData(data.filter((item) => item.id !== id));
   };
 
-  const handleEdit = (id) => {
-    alert(`Edit item with ID ${id}`);
-};
 
 
 
@@ -134,12 +132,12 @@ function IPedidos() {
             <div className="text-3xl text-left relative top-16">Listado:</div>
           </div>
           <div>
-            <a
-              href="#settings"
+            <Link
+              to="/rpedidos"
               className="block text-right text-3xl p-8 hover:text-purple-400"
             >
               Registrar Nuevo
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -162,7 +160,7 @@ function IPedidos() {
               </tr>
             </thead>
             <tbody className="text-center">
-              {data.map((item) => (
+            {data.map((item) => (
                 <tr key={item.id} className=" border-r border-b border-white ">
                   <td className="p-3">{item.id}</td>
                   <td className="p-3">{item.cliente}</td>
@@ -176,12 +174,11 @@ function IPedidos() {
                   <td className="p-3">{item.precioInicial}</td>
                   <td className="p-3">{item.precioFinal}</td>
                   <td className="p-3">
-                    <button
-                      onClick={() => handleEdit(item.id)}
-                      className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2"
-                    >
-                      Editar
-                    </button>
+                  <Link to="/apedido">
+                      <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
+                        Editar
+                      </button>
+                  </Link>
                     <button
                       onClick={() => handleDelete(item.id)}
                       className="bg-purple-600 text-white px-3 py-1 rounded-lg"

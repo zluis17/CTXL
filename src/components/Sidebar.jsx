@@ -121,7 +121,7 @@ return(
                   Registro Pedido
                 </Link>
                 <Link
-                  to="/rproducto"
+                  to="/rproductos"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
                   Registro Material
@@ -130,7 +130,7 @@ return(
                   to="/rempleado"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
-                  Registro Proveedores
+                  Registro Empleados
                 </Link>
               </div>
             )}

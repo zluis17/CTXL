@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import backgroundImag from '../img/imagen1.jpg';
-
+import { Link } from 'react-router-dom';
 import '../index.css';
+
 
 const MiComponente = () => {
     return (
@@ -124,9 +125,7 @@ function IEmpleados() {
     const handleDelete = (id) => {
         setData(data.filter((item) => item.id !== id));
     };
-    const handleEdit = (id) => {
-        alert(`Edit item with ID ${id}`);
-    };
+ 
    
     return (
         <div className="flex h-screen">
@@ -154,12 +153,12 @@ function IEmpleados() {
                         <h2 className="text-3xl">Listado:</h2>
                     </div>
                     <div>
-                        <a
-                            href="#settings"
+                        <Link
+                            to="/rempleado"
                             className="text-3xl p-8 hover:text-purple-400"
                             >
                             Registrar Nuevo
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* Table */}
@@ -187,12 +186,11 @@ function IEmpleados() {
                                     <td className="p-3">{item.correo}</td>
                                     <td className="p-3">{item.celular}</td>
                                     <td className="p-3">
-                                        <button
-                                            onClick={() => handleEdit(item.id)}
-                                            className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2"
-                                            >
+                                    <Link to="/aempleados">
+                                        <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
                                             Editar
                                         </button>
+                                    </Link>
                                         <button
                                             onClick={() => handleDelete(item.id)}
                                             className="bg-purple-600 text-white px-3 py-1 rounded-lg"

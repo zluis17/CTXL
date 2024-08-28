@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import logoFacebook from '../img/facebook-512.webp';
-import logoGoogle from '../img/google_logo-google_icongoogle-512.webp';
-import logoTwitter from '../img/1690643591twitter-x-logo-png.webp';
-import logoInstagram from '../img/instagram-logo-instagram-icon-transparent-free-png.webp';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 
 const MiComponente = () => {
@@ -84,9 +81,7 @@ function Iproducto() {
     setData(data.filter((item) => item.id !== id));
   };
 
-  const handleEdit = (id) => {
-    alert(`Edit item with ID ${id}`);
-  };
+ 
 
 
   return (
@@ -114,12 +109,12 @@ function Iproducto() {
             <div className="text-3xl text-left relative top-16">Listado:</div>
           </div>
           <div>
-            <a
-              href="#settings"
+            <Link
+              to="/rproductos"
               className="block text-right text-3xl p-8 hover:text-purple-400"
             >
               Registrar Nuevo
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -140,12 +135,13 @@ function Iproducto() {
                   <td className="p-4 border-b">{item.material}</td>
                   <td className="p-4 border-b">{item.color}</td>
                   <td className="p-4 border-b">
-                    <button
-                      onClick={() => handleEdit(item.id)}
-                      className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2"
-                    >
-                      Editar
-                    </button>
+                  <Link 
+                  to="/aproducto"
+                  >
+                    <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
+                       Editar
+                     </button>
+                  </Link>
                     <button
                       onClick={() => handleDelete(item.id)}
                       className="bg-purple-600 text-white px-3 py-1 rounded-lg"

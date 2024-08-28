@@ -9,6 +9,11 @@ import IPedidos from './pages/ipedidos'
 import Rproductos from './pages/rproductos'
 import RPedidos from './pages/rpedidos'
 import REmpleados from './pages/rempleados'
+import EditarPedido from './pages/apedido'; 
+import EditarEmpleados from './pages/aempleados'; 
+import EditarProducto from './pages/aproducto'; 
+
+
 //import Login from './pages/login'
 //import SingUp from './pages/singUp'
 //import Index from './pages/index'
@@ -24,8 +29,11 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/perfilDetalle" element={<PerfilDetalle/>}/>
           <Route path="/ipedidos" element={<IPedidos/>}/>
+          <Route path="/apedido" element={<EditarPedido />} />
           <Route path="/iproducto" element={<Iproducto/>}/>
+          <Route path="/aproducto" element={<EditarProducto/>}/>
           <Route path="/iempleado" element={<IEmpleados/>}/>
+          <Route path="/aempleados" element={<EditarEmpleados/>}/>
           <Route path="/rproductos" element={<Rproductos/>}/>
           <Route path="/rproductos" element={<Rproductos/>}/>
           <Route path="/rpedidos" element={<RPedidos/>}/>

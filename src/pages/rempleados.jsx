@@ -31,7 +31,7 @@ function REmpleados(){
                 {/* Content */}
                 <div className=" w-3/4 margin-top-20px">
                     <div className="w-1/4 flex">
-                        <h1 className="white-space:nowrap text-4xl font-bold">Registro Proveedores</h1>
+                        <h1 className="white-space:nowrap text-4xl font-bold">Registro Empleados</h1>
                         <div className="pl-[120vh]">
                         </div>
                     </div> 
@@ -39,7 +39,7 @@ function REmpleados(){
                 {/* Registro */}
                 <div className="flex justify-center items-center h-screen">
                     <div className="w-full max-w-md bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
-                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Registro Proveedores</h2>
+                        <h2 className="text-3xl font-bold mb-8 text-center text-white">Registro Empleados</h2>
                         <form onSubmit={handleSubmit}>
                         <div className="space-y-6">
                             <div className="w-full">
