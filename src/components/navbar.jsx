@@ -4,12 +4,17 @@ import {
     AiOutlineSearch,
     AiOutlineClose,
 } from 'react-icons/ai';
-import { BsFillCartFill } from 'react-icons/bs';
+import { BsFillPersonFill } from 'react-icons/bs'; // Importar solo el icono de perfil
 import { TbTruckDelivery } from 'react-icons/tb';
 import { MdHelp } from 'react-icons/md';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
+
+    const handleSearch = () => {
+        console.log("Buscando:", searchTerm);
+    };
 
     return (
         <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
@@ -21,27 +26,26 @@ const Navbar = () => {
                 >
                     <AiOutlineMenu size={30} />
                 </div>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-                    Las Mejores Confecciones{' '}
-                    <span className="font-bold">Textiles</span>
-                </h1>
+                <div className="px-2">
+                    <img src="img/logoCTXY.jpg" alt="Logo" className="h-10" />
+                </div>
             </div>
 
-            {/* Search */}
-            <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
-                <AiOutlineSearch size={25} />
-                <input
-                    className="bg-transparent p-2 w-full focus:outline-none"
-                    type="text"
-                    placeholder="Buscar Uniformes"
-                />
+            {/* Centered Search */}
+            <div className="flex-1 flex justify-center">
+                <div className="rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px] border-2 border-[#9b59b6] transition duration-300">
+                    <AiOutlineSearch size={25} onClick={handleSearch} className="cursor-pointer" />
+                    <input
+                        className="bg-transparent p-2 w-full focus:outline-none text-white placeholder:text-gray-500 placeholder:opacity-100"
+                        type="text"
+                        placeholder="Buscar..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                </div>
             </div>
 
-            {/* Cart Button */}
-            <button className="bg-black text-white hidden md:flex items-center py-2 px-4 rounded-full">
-                <BsFillCartFill size={20} className="mr-2" /> Carrito
-            </button>
-
+          
             {/* Mobile Menu Overlay */}
             {nav && (
                 <div className="fixed top-0 left-0 w-full h-screen bg-black/80 z-10"></div>
@@ -49,7 +53,7 @@ const Navbar = () => {
 
             {/* Side Drawer Menu */}
             <div
-                className={`fixed top-0 left-0 w-[300px] h-screen bg-white z-20 duration-300 ${
+                className={`fixed top-0 left-0 w-[300px] h-screen bg-black text-white z-20 duration-300 ${
                     nav ? 'translate-x-0' : '-translate-x-full'
                 }`}
             >
@@ -58,34 +62,24 @@ const Navbar = () => {
                     size={30}
                     className="absolute right-4 top-4 cursor-pointer"
                 />
-                <h2 className="text-2xl p-4">
-                    Mejores{' '}
-                    <span className="font-bold">Confecciones</span>
-                </h2>
+                <div className="flex justify-center p-4">
+                    <img src="img/logoCTXY.jpg" alt="Logo" className="h-10" />
+                </div>
                 <nav>
-                    <ul className="flex flex-col p-4 text-gray-800">
-                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-primary">
-                            <TbTruckDelivery
-                                size={25}
-                                className="mr-4"
-                            />
-                            Registrarse
-                        </li>
-                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-primary">
-                            <TbTruckDelivery
-                                size={25}
-                                className="mr-4"
-                            />
+                    <ul className="flex flex-col p-4 text-gray-300">
+                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-[#9b59b6]">
+                            <BsFillPersonFill size={25} className="mr-4" />
                             Iniciar Sesión
                         </li>
-                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-primary">
-                            <TbTruckDelivery
-                                size={25}
-                                className="mr-4"
-                            />
+                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-[#9b59b6]">
+                            <BsFillPersonFill size={25} className="mr-4" />
+                            Registrarse
+                        </li>
+                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-[#9b59b6]">
+                            <TbTruckDelivery size={25} className="mr-4" />
                             Contacto
                         </li>
-                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-primary">
+                        <li className="text-xl py-4 flex items-center cursor-pointer hover:text-[#9b59b6]">
                             <MdHelp size={25} className="mr-4" />
                             Ayuda
                         </li>
