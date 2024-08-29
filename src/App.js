@@ -25,6 +25,8 @@ function MainLayout() {
     <div>
       {/* Renderiza Navbar solo en las rutas del Index */}
       {location.pathname === '/' && <Navbar />}
+      {location.pathname === '/singUp' && <Navbar />}
+      {location.pathname === '/login' && <Navbar />}
       
       <Routes>
         {/* Ruta para el Index sin Sidebar */}
