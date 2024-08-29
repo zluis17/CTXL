@@ -31,13 +31,13 @@ return(
         </div>
         <nav className="flex flex-col p-6 space-y-2">
           <Link
-            to="/home"
+            to="/app/home"
             className="p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
           >
             Inicio
           </Link>
           <Link
-            to="/perfilDetalle"
+            to="/app/perfilDetalle"
             className="p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
           >
             Perfil
@@ -68,19 +68,19 @@ return(
             {isInventoryOpen && (
               <div className="pl-6 mt-2">
                 <Link
-                 to="/ipedidos"
+                 to="/app/ipedidos"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Pedidos
                 </Link>
                 <Link
-                 to="iproducto"
+                 to="/app/iproducto"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300" 
                 >
                   Inventario Material
                 </Link>
                 <Link
-                  to="iempleado"
+                  to="/app/iempleado"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
                   Inventario Empleados
@@ -115,19 +115,19 @@ return(
             {isRegisterOpen && (
               <div className="pl-6 mt-2">
                 <Link
-                  to="/rpedidos"
+                  to="/app/rpedidos"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
                   Registro Pedido
                 </Link>
                 <Link
-                  to="/rproductos"
+                  to="/app/rproductos"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
                   Registro Material
                 </Link>
                 <Link
-                  to="/rempleado"
+                  to="/app/rempleado"
                   className="block p-3 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300"
                 >
                   Registro Empleados

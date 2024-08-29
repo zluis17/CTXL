@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 
 function Rproductos(){
@@ -78,12 +79,15 @@ function Rproductos(){
                                     
                                 </div>
                                 <div className="flex space-x-4">
-                                    <button
-                                        type="button"
-                                        className="w-1/2 bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
-                                        >
-                                        Cancelar
-                                    </button>
+                                <Link
+                                to="/app/iproducto">
+                                <button
+                                    type="button"
+                                    className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
+                                    >
+                                    Cancelar
+                                </button>
+                                 </Link>
                                     <button
                                         type="submit"
                                         className="w-1/2 bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"

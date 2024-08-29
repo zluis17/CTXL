@@ -110,7 +110,7 @@ function Iproducto() {
           </div>
           <div>
             <Link
-              to="/rproductos"
+              to="/app/rproductos"
               className="block text-right text-3xl p-8 hover:text-purple-400"
             >
               Registrar Nuevo
@@ -136,7 +136,7 @@ function Iproducto() {
                   <td className="p-4 border-b">{item.color}</td>
                   <td className="p-4 border-b">
                   <Link 
-                  to="/aproducto"
+                  to="/app/aproducto"
                   >
                     <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
                        Editar

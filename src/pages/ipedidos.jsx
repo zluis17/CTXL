@@ -133,7 +133,7 @@ function IPedidos() {
           </div>
           <div>
             <Link
-              to="/rpedidos"
+              to="/app/rpedidos"
               className="block text-right text-3xl p-8 hover:text-purple-400"
             >
               Registrar Nuevo
@@ -174,7 +174,7 @@ function IPedidos() {
                   <td className="p-3">{item.precioInicial}</td>
                   <td className="p-3">{item.precioFinal}</td>
                   <td className="p-3">
-                  <Link to="/apedido">
+                  <Link to="/app/apedido">
                       <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
                         Editar
                       </button>

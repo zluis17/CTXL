@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logoFacebook from "../img/facebook-512.webp";
 import logoGoogle from "../img/google_logo-google_icongoogle-512.webp"
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [correo, setCorreo] = useState('');
@@ -13,7 +14,7 @@ function Login() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
-      <div className="w-full max-w-md bg-black p-8 rounded-lg shadow-lg">
+      <div className="w-full max-w-md bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
         <h2 className="text-3xl font-bold mb-8 text-center text-white">Iniciar Sesión</h2>
 
         <form onSubmit={handleSubmit}>
@@ -70,13 +71,15 @@ function Login() {
               <img src={logoFacebook} alt="Facebook" className="w-6 h-6 mr-2" />
             </button>
           </div>
-
+          <Link
+          to="/app/home">
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-200"
+            className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition duration-200"
           >
             Iniciar Sesión
           </button>
+          </Link>
         </form>
       </div>
     </div>

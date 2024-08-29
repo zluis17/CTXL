@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 function RPedidos(){
     
@@ -183,6 +184,15 @@ function RPedidos(){
                                     </div>
                                 </div>
                                 <div className="text-center">
+                                <Link
+                                to="/app/iproducto">
+                                <button
+                                    type="button"
+                                    className="px-6 py-3 bg-purple-600 text-white py-3 rounded-md hover:bg-purple-900 transition duration-200"
+                                    >
+                                    Cancelar
+                                </button>
+                                 </Link>
                                     <button
                                         type="submit"
                                         className="px-6 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition duration-300"

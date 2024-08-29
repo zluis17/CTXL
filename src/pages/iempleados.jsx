@@ -186,7 +186,7 @@ function IEmpleados() {
                                     <td className="p-3">{item.correo}</td>
                                     <td className="p-3">{item.celular}</td>
                                     <td className="p-3">
-                                    <Link to="/aempleados">
+                                    <Link to="/app/aempleados">
                                         <button className="bg-purple-600 text-white px-3 py-1 rounded-lg mr-2">
                                             Editar
                                         </button>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -53,7 +52,7 @@ const Index = () => {
 
     return (
         <div className="bg-black text-gray-300">
-            <Navbar />
+          
 
             <section className="text-center py-8">
                 <h2 className="text-4xl font-bold mb-4 transition-transform transform hover:translate-y-1 hover:shadow-lg">

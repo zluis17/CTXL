@@ -17,7 +17,7 @@ function Registro() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
-      <div className="w-full max-w-2xl bg-black p-8 rounded-lg shadow-lg">
+      <div className="w-full max-w-2xl bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
         <h2 className="text-3xl font-bold mb-8 text-center text-white">Registro</h2>
 
         <form onSubmit={handleSubmit}>

@@ -1,54 +1,74 @@
-import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
-import Sidebar from '../src/components/Sidebar'
-import React from 'react'
-import Home from '../src/pages/home'
-import PerfilDetalle from '../src/pages/perfilDetalle'
-import Iproducto from './pages/iproducto'
-import IEmpleados from './pages/iempleados'
-import IPedidos from './pages/ipedidos'
-import Rproductos from './pages/rproductos'
-import RPedidos from './pages/rpedidos'
-import REmpleados from './pages/rempleados'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from '../src/components/navbar';  // Asegúrate de importar tu Navbar
+import Sidebar from '../src/components/Sidebar';
+import React from 'react';
+import Index from '../src/pages/index';
+import SingUp from '../src/pages/singUp';
+import Login from '../src/pages/login';
+import Home from '../src/pages/home';
+import PerfilDetalle from '../src/pages/perfilDetalle';
+import PerfilEditar from '../src/pages/perfilEditar';
+import Iproducto from './pages/iproducto';
+import IEmpleados from './pages/iempleados';
+import IPedidos from './pages/ipedidos';
+import Rproductos from './pages/rproductos';
+import RPedidos from './pages/rpedidos';
+import REmpleados from './pages/rempleados';
 import EditarPedido from './pages/apedido'; 
 import EditarEmpleados from './pages/aempleados'; 
 import EditarProducto from './pages/aproducto'; 
 
+function MainLayout() {
+  const location = useLocation();  // Aquí es seguro usar useLocation
 
-//import Login from './pages/login'
-//import SingUp from './pages/singUp'
-//import Index from './pages/index'
-//import Navbar from './components/navbar'
+  return (
+    <div>
+      {/* Renderiza Navbar solo en las rutas del Index */}
+      {location.pathname === '/' && <Navbar />}
+      
+      <Routes>
+        {/* Ruta para el Index sin Sidebar */}
+        <Route path="/" element={<Index />} />
+        
+        <Route path="/singUp" element={<SingUp />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* Rutas con Sidebar */}
+        <Route
+          path="/app/*"
+          element={
+            <div className="flex">
+              <Sidebar />
+              <div className="content">
+                <Routes>
+                  <Route path="home" element={<Home />} />
+                  <Route path="perfilDetalle" element={<PerfilDetalle />} />
+                  <Route path="perfilEditar" element={<PerfilEditar />} />
+                  <Route path="ipedidos" element={<IPedidos />} />
+                  <Route path="apedido" element={<EditarPedido />} />
+                  <Route path="iproducto" element={<Iproducto />} />
+                  <Route path="aproducto" element={<EditarProducto />} />
+                  <Route path="iempleado" element={<IEmpleados />} />
+                  <Route path="aempleados" element={<EditarEmpleados />} />
+                  <Route path="rproductos" element={<Rproductos />} />
+                  <Route path="rpedidos" element={<RPedidos />} />
+                  <Route path="rempleado" element={<REmpleados />} />
+                </Routes>
+              </div>
+            </div>
+          }
+        />
+      </Routes>
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="flex">
-        <Sidebar/>
-        <div className="content">
-          <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/perfilDetalle" element={<PerfilDetalle/>}/>
-          <Route path="/ipedidos" element={<IPedidos/>}/>
-          <Route path="/apedido" element={<EditarPedido />} />
-          <Route path="/iproducto" element={<Iproducto/>}/>
-          <Route path="/aproducto" element={<EditarProducto/>}/>
-          <Route path="/iempleado" element={<IEmpleados/>}/>
-          <Route path="/aempleados" element={<EditarEmpleados/>}/>
-          <Route path="/rproductos" element={<Rproductos/>}/>
-          <Route path="/rproductos" element={<Rproductos/>}/>
-          <Route path="/rpedidos" element={<RPedidos/>}/>
-          <Route path="/rempleado" element={<REmpleados/>}/>
-
-          
-          </Routes>
-
-          
-        </div>
-      </div>
+      <MainLayout />  {/* MainLayout está dentro de Router, por lo que useLocation funcionará */}
     </Router>
-
-  
-
-);
+  );
 }
-export default App
+
+export default App;
