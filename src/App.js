@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from '../src/components/navbar';  // Asegúrate de importar tu Navbar
+import Navbar from '../src/components/navbar';  
 import Sidebar from '../src/components/Sidebar';
 import React from 'react';
 import Index from '../src/pages/index';
 import SingUp from '../src/pages/singUp';
 import Login from '../src/pages/login';
 import Home from '../src/pages/home';
+import sidebarBackground from '../src/img/imagen1.jpg';
 import PerfilDetalle from '../src/pages/perfilDetalle';
 import PerfilEditar from '../src/pages/perfilEditar';
 import Iproducto from './pages/iproducto';
@@ -19,14 +20,12 @@ import EditarEmpleados from './pages/aempleados';
 import EditarProducto from './pages/aproducto'; 
 
 function MainLayout() {
-  const location = useLocation();  // Aquí es seguro usar useLocation
+  const location = useLocation(); 
 
   return (
     <div>
       {/* Renderiza Navbar solo en las rutas del Index */}
       {location.pathname === '/' && <Navbar />}
-      {location.pathname === '/singUp' && <Navbar />}
-      {location.pathname === '/login' && <Navbar />}
       
       <Routes>
         {/* Ruta para el Index sin Sidebar */}
@@ -41,7 +40,16 @@ function MainLayout() {
           element={
             <div className="flex">
               <Sidebar />
-              <div className="content">
+              <div
+                className="content"
+                style={{
+                  backgroundImage: `url(${sidebarBackground})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  width: '100%',  
+                  minHeight: '100vh', 
+                }}
+              >
                 <Routes>
                   <Route path="home" element={<Home />} />
                   <Route path="perfilDetalle" element={<PerfilDetalle />} />

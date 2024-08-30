@@ -1,36 +1,40 @@
 import React from 'react';
-import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
-import { CameraIcon } from 'lucide-react';
 import { Button } from '../components/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/Card';
 import { Input } from '../components/Input';
 import { Label } from '../components/Label';
 import { Link } from 'react-router-dom';
 
+
 const Perfil = () => {
   return (
-    <div className="flex h-screen">
-    <main
-    className="flex-1 flex flex-col p-10 bg-gray-900 text-white bg-cover bg-no-repeat"
-    style={{ backgroundImage: `url(${backgroundImag})` }}
-    >
-      
-      <div className="min-h-screen w-full flex items-center justify-center p-4">
+    <div className="main-content">
+  {/* Contenido principal de la ruta de Perfil */}
+  <div className="flex h-screen flex-1">
+      {/* Sidebar */}
+
+      {/* Main Content */}
+      <main
+        
+      >
+      <div className=" w-2/4 margin-top-2px">
+                    <div className="w-1/4 flex">
+                        <h1 className="white-space:nowrap text-4xl font-bold">.</h1>
+                        <div className="pl-[150vh] ">
+                        </div>
+                    </div> 
+                </div>
+      <div className="flex justify-center items-center h-screen ">
         <Card className="w-full max-w-2xl bg-black border-gray-800 shadow-2xl shadow-purple-600/50">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-white">Perfil usuario</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-4">
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-24 h-24 rounded-full bg-gray-700 flex items-center justify-center">
-                  <CameraIcon className="w-8 h-8 text-gray-400" />
+                <div>
                 </div>
-                <Button size="icon" className="absolute bottom-0 right-0 rounded-full bg-purple-600 hover:bg-purple-700">
-                  <CameraIcon className="w-4 h-4" />
-                  <span className="sr-only">Subir foto</span>
-                </Button>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -77,6 +81,9 @@ const Perfil = () => {
    
     </main>
     </div>
+
+    </div>
+
     
   );
 };

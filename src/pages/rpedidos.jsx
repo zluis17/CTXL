@@ -30,12 +30,7 @@ function RPedidos(){
                 style={{ backgroundImage: `url(${backgroundImag})` }}
             >
                 {/* Content */}
-                <div className="w-3/4 margin-top-20px">
-                    <div className="w-1/4 flex">
-                        <div className="pl-[120vh]">
-                        </div>
-                    </div>
-                </div>
+                
                 {/* Registro */}
                 <div className="flex justify-center items-center h-screen">
                     <div className="w-[800px] bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">

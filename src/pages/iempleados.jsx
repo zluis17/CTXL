@@ -154,7 +154,7 @@ function IEmpleados() {
                     </div>
                     <div>
                         <Link
-                            to="/rempleado"
+                            to="/app/rempleado"
                             className="text-3xl p-8 hover:text-purple-400"
                             >
                             Registrar Nuevo
