@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
 
 const Home = () => {
@@ -19,16 +18,12 @@ const Home = () => {
     { label: 'Pedidos Completados', value: 850 },
   ];
 
-  // Estado para controlar la visibilidad de los submenús
-  
-
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
 
-
       {/* Main Content */}
-      <main className="flex-1 flex flex-col p-10 bg-gray-900 text-white bg-cover bg-no-repeat" style={{ backgroundImage: `url(${backgroundImag})` }}>
+      <main className="flex-1 flex flex-col p-10 bg-gray-900 text-white">
         <div className="w-full max-w-6xl mx-auto">
           {/* Bienvenida al administrador */}
           <h1 className="text-4xl font-bold mb-6">¡Bienvenido Administrador!</h1>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import backgroundImag from '../img/imagen1.jpg';
 import '../index.css';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +26,6 @@ function RPedidos(){
             {/* Main Content */}
             <main
                 className="flex-1 flex flex-col p-10 bg-gray-100 text-white bg-cover bg-no-repeat"
-                style={{ backgroundImage: `url(${backgroundImag})` }}
             >
                 {/* Content */}
                 

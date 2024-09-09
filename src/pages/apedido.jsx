@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import backgroundImage from '../img/imagen1.jpg';
 import '../index.css';
 
 function APedidos() {
@@ -23,7 +22,6 @@ function APedidos() {
     <div className="flex h-screen">
       <main
         className="flex-1 p-6 bg-gray-100 text-white bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="flex justify-center items-center h-full">
           <div className="w-full max-w-4xl bg-black p-8 rounded-lg shadow-2xl shadow-purple-600/100">
